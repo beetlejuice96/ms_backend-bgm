@@ -5,6 +5,8 @@ import { LoggerModule } from './logger/logger.module';
 
 import config from '@/config/env.config';
 import { validationSchema } from '@/config/env.validation-schema';
+import { SocketModule } from './socket/socket.module';
+import { ContextStorageModule } from './context-storage/context-storage.module';
 
 @Module({
   imports: [
@@ -14,8 +16,9 @@ import { validationSchema } from '@/config/env.validation-schema';
       isGlobal: true,
       validationSchema,
     }),
-    ,
     LoggerModule,
+    ContextStorageModule,
+    SocketModule,
   ],
   controllers: [],
   providers: [],
