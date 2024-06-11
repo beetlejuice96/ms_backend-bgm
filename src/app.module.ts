@@ -7,6 +7,7 @@ import config from '@/config/env.config';
 import { validationSchema } from '@/config/env.validation-schema';
 import { SocketModule } from './socket/socket.module';
 import { ContextStorageModule } from './context-storage/context-storage.module';
+import { BodyguardsModule } from './bodyguards/bodyguards.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { ContextStorageModule } from './context-storage/context-storage.module';
     LoggerModule,
     ContextStorageModule,
     SocketModule,
+    BodyguardsModule,
   ],
   controllers: [],
   providers: [],
